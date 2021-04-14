@@ -1,0 +1,209 @@
+:root {
+  --clr-gradient-0: rgba(255, 186, 0, 0);
+  --clr-primary-400: #ff7aa9;
+  --clr-accent-200: #fff100;
+
+  --clr-glass-0: rgba(255, 255, 255, 9);
+  --clr-glass-10: rgba(255, 255, 255, 22);
+
+  --clr-neutral-100: #fff;
+  --clr-neutral-900: ;
+
+  --ff-primary: "Lato", sans-serif;
+  --ff-accent: "Source Sans Pro", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--ff-primary);
+  color: var(--clr-neutral-100);
+  letter-spacing: 0.5rem;
+}
+p,
+li {
+  font-family: var(--ff-accent);
+  color: var(--clr-neutral-100);
+  letter-spacing: -0.035rem;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* ---- NAV ---- */
+/* ---- NAV ---- */
+.sticky {
+  display: flex;
+  justify-content: space-around;
+  height: 10vh;
+  margin-top: 1rem;
+}
+.nav {
+  z-index: 10;
+}
+.collapsed-nav {
+  list-style: none;
+  padding-top: 0.5rem;
+}
+.line {
+  width: 30px;
+  border: 1px solid var(--clr-neutral-100);
+  margin-bottom: 0.5rem;
+}
+
+/* ---- Background Gradients ---- */
+/* ---- Background Gradients ---- */
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  background-attachment: fixed;
+  height: 100vh;
+  background-color: var(--clr-accent-200);
+  background-image: radial-gradient(
+      circle 30rem at top right,
+      var(--clr-primary-400),
+      var(--clr-gradient-0)
+    ),
+    radial-gradient(
+      circle 30rem at left,
+      var(--clr-primary-400),
+      var(--clr-gradient-0)
+    ),
+    radial-gradient(
+      circle 30rem at bottom right,
+      var(--clr-primary-400),
+      var(--clr-gradient-0)
+    );
+}
+
+/* ---- Content Panes ---- */
+/* ---- Content Panes ---- */
+.container {
+  width: 100%;
+  position: relative;
+  /* display: flex;
+  flex-direction: column; */
+}
+.frostedGlass {
+  margin: 1rem 0 1rem 0;
+  padding: 1.5rem;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  /* top: 2.3rem;
+  left: 2.3rem; */
+}
+#pane1 {
+  position: absolute;
+  top: 5rem;
+  right: 0.033rem;
+  z-index: 4;
+  border-radius: 15px 0 0 15px;
+}
+#pane2 {
+  position: absolute;
+  top: 15.5rem;
+  z-index: 2;
+  border-radius: 0 15px 15px 0;
+}
+#pane3 {
+  position: absolute;
+  top: 31rem;
+  left: 2.4rem;
+  z-index: 3;
+  border-radius: 15px;
+}
+.imgFilter {
+  opacity: 0.91;
+  background: rgba(255, 105, 0, 0.22);
+}
+
+/* ---- SHAPES ---- */
+/* ---- SHAPES ---- */
+.shapes {
+  z-index: 1;
+  display: flex;
+}
+.ball {
+  position: fixed;
+  top: 5rem;
+  left: 3rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: radial-gradient(
+    41% 100%,
+    #e6c1e6 40%,
+    rgba(114, 68, 252, 0.89) 100%
+  );
+  box-shadow: -31px 53px 57px 1px #ff7aa9,
+    inset 0 1px 302px 12px rgba(255, 0, 81, 0.69);
+  z-index: 1;
+}
+.artPanes {
+  position: fixed;
+  top: 38rem;
+  left: 1rem;
+  width: 100px;
+  height: 100px;
+  background-color: var(--clr-primary-400);
+}
+/* ---- PAPERWEIGHT ---- */
+.paperweight {
+  position: fixed;
+  top: 20rem;
+  left: 15rem;
+  width: 100px;
+  height: 100px;
+  background-color: var(--clr-primary-400);
+}
+
+/* 
+<svg width="642px" height="640px" viewBox="0 0 642 640">
+  <g id="Paperweight" filter="url(#filter-1)" transform="translate(114.722374, 355.969166) rotate(-169.000000) translate(-114.722374, -355.969166) translate(37.018627, 279.667551)">
+      <path d="M84.0913706,16.3021217 L125.47429,44.9079103 C132.099322,49.487439 134.876036,57.9104622 132.273189,65.5320315 L116.839588,110.72418 C114.35135,118.010152 107.504673,122.90687 99.8055364,122.90687 L47.9068994,122.90687 C40.2077626,122.90687 33.3610853,118.010152 30.8728482,110.72418 L15.4392471,65.5320315 C12.8363998,57.9104622 15.6131135,49.487439 22.2381456,44.9079103 L63.6210652,16.3021217 C69.7803541,12.0445363 77.9320816,12.0445363 84.0913706,16.3021217 Z" id="Polygon" fill="url(#radialGradient-2)"></path>
+      <g id="Oval">
+          <use fill-opacity="0.98" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+          <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+      </g>
+      <g id="Oval-Copy" transform="translate(44.211896, 33.095217) rotate(-1.000000) translate(-44.211896, -33.095217) ">
+          <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+          <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+      </g>
+      <g id="Oval-Copy" transform="translate(104.211896, 33.595217) rotate(69.000000) translate(-104.211896, -33.595217) ">
+          <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-7"></use>
+          <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+      </g>
+      <g id="Oval-Copy" transform="translate(121.211896, 87.000000) rotate(143.000000) translate(-121.211896, -87.000000) ">
+          <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-9"></use>
+          <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+      </g>
+      <g id="Oval-Copy" transform="translate(73.211896, 120.500000) rotate(214.000000) translate(-73.211896, -120.500000) ">
+          <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-11"></use>
+          <use fill="black" fill-opacity="1" filter="url(#filter-12)" xlink:href="#path-11"></use>
+      </g>
+      <g id="Oval-Copy" transform="translate(26.211896, 86.500000) rotate(285.000000) translate(-26.211896, -86.500000) ">
+          <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-13"></use>
+          <use fill="black" fill-opacity="1" filter="url(#filter-14)" xlink:href="#path-13"> */
