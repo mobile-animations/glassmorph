@@ -10,27 +10,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,900&family=Source+Sans+Pro:wght@200;300;400&display=swap" rel="stylesheet">
     <title>Glassmorph</title>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js" defer></script>
+    <script src="app.js" defer></script>
 </head>
 <body>
     <nav class="sticky">
-        <img class="nav logo" src="resources/img/figure-white.png" alt="art figure logo for contrapposto muse strategies">
+        <img class="nav logo" src="resources/img/figure-white.png" alt="art figure logo">
         <ul class="nav collapsed-nav">
             <li class="line"></li>
             <li class="line"></li>
             <li class="line"></li>
         </ul>
     </nav>
-    <div class="shapes">
+    <div class="hero">
         <div class="ball"></div>
-        <div class="paperweight"></div>
         <div class="artPanes"></div>
+        <div class="paperweight"></div>
     </div>
     <div class="container">
-        <div id="pane1" class="frostedGlass">
-            <h1>Jan Smith</h1>
+        <div id="card1" class="frostedGlass card1">
+            <h1>Mobile Site</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique minus eos, tempora a molestias ex soluta, ratione molestiae rem, ipsa nisi culpa obcaecati neque iure voluptatibus perspiciatis alias illo.</p>
         </div>
-        <div id="pane2" class="frostedGlass">
+        <div id="card2" class="frostedGlass card2">
             <ul>
                 <li>Lorem ipsum dolor sit.</li>
                 <li>Cumque tenetur nostrum sunt?</li>
@@ -39,10 +44,10 @@
                 <li>Similique quibusdam iste tempora?</li>
             </ul>
         </div>
-        <div id="pane3" class="frostedGlass">
+        <div id="card3" class="frostedGlass card3">
             <img class="imgFilter" src="resources/img/jan.jpg" alt="Smiling female museum director">
         </div>
-        <div id="pane4" class="frostedGlass">
+        <div id="card4" class="frostedGlass card4">
             <ul>
                 <li>Lorem ipsum dolor sit.</li>
                 <li>Exercitationem nihil illo maiores.</li>
@@ -52,6 +57,5 @@
             </ul>
         </div>
     </div>
-    <script src="app.js"></script>
 </body>
 </html>
