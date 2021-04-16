@@ -55,13 +55,16 @@ html {
   display: flex;
   justify-content: space-around;
   height: 10vh;
+  width: 100vw;
   margin-top: 1rem;
 }
 
 .nav {
   z-index: 10;
 }
-
+.logo {
+  min-height: 10vh;
+}
 .collapsed-nav {
   list-style: none;
   padding-top: 0.5rem;
@@ -78,20 +81,25 @@ body {
   height: 100vh;
   background-color: var(--clr-accent-200);
   background-image: radial-gradient(
-      circle 30rem at top right,
+      circle 60rem at top right,
       var(--clr-primary-400),
       var(--clr-gradient-0)
     ),
-    radial-gradient(
+    /* radial-gradient(
       circle 30rem at left,
       var(--clr-primary-400),
       var(--clr-gradient-0)
     ),
     radial-gradient(
-      circle 30rem at bottom right,
+      circle 30rem at center,
       var(--clr-primary-400),
       var(--clr-gradient-0)
-    );
+    ), */
+      radial-gradient(
+        circle 30rem at bottom left,
+        var(--clr-primary-400),
+        var(--clr-gradient-0)
+      );
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -109,11 +117,13 @@ body {
 .frostedGlass {
   margin: 1rem 0 1rem 0;
   padding: 1.5rem;
+  top: 20rem;
   width: 80%;
   background: rgba(255, 255, 255, 0.22);
   border: 1px solid rgba(255, 255, 255, 0.24);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
+  z-index: 10;
   /* top: 2.3rem;
   left: 2.3rem; */
 }
@@ -155,7 +165,7 @@ body {
   display: flex;
   /* SETS HEIGHT OF LANDING SCREEN */
   height: 320px;
-  z-index: 2;
+  z-index: 1;
 }
 .ball {
   position: fixed;
