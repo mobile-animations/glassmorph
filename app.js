@@ -25,7 +25,7 @@ timeline
         scrollTrigger: {
             trigger: ".sticky",
             endTrigger: ".card2",
-            scrub: true,
+            scrub: 1,
             start: "top top"
         },
         x: "50vw",
@@ -48,9 +48,9 @@ timeline
     .from(".card1", {
     scrollTrigger: {
         trigger: ".card1",
-        // endTrigger: ".card4",
-        scrub: true,
-        start: "top 50%",
+        // endTrigger: ".card1",
+        scrub: 1,
+        start: "top 60%",
         end: "bottom 45%"
     },
     ease: "back.out(0.8)",
@@ -83,7 +83,7 @@ timeline
         trigger: ".card4",
         // endTrigger: ".card4",
         scrub: 1.2,
-        start: "top 80%",
+        start: "top 90%",
         end: "bottom bottom"
     },
     ease: "back.out(0.7)",

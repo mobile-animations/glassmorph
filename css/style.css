@@ -1,6 +1,6 @@
 :root {
   --clr-gradient-0: rgba(255, 186, 0, 0);
-  --clr-primary-400: #ff7aa9;
+  --clr-primary-400: #ff7aa8;
   --clr-accent-200: #fff100;
 
   --clr-glass-0: rgba(255, 255, 255, 9);
@@ -45,8 +45,35 @@ li {
   letter-spacing: -0.035rem;
 }
 
-html {
+html,
+body {
+  /* margin: 0; */
+  /* padding: 0; */
   overflow-x: hidden;
+}
+
+/* ---- Background Gradients ---- */
+/* ---- Background Gradients ---- */
+body {
+  /* fix mobile scrolling issue */
+  height: 86.5vh;
+  position: fixed;
+
+  background-color: var(--clr-accent-200);
+  background-image: radial-gradient(
+      circle 60rem at top right,
+      var(--clr-primary-400),
+      var(--clr-gradient-0)
+    ),
+    radial-gradient(
+      circle 30rem at bottom left,
+      var(--clr-primary-400),
+      var(--clr-gradient-0)
+    );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
 }
 
 /* ---- NAV ---- */
@@ -64,6 +91,7 @@ html {
 }
 .logo {
   min-height: 10vh;
+  max-width: 30px;
 }
 .collapsed-nav {
   list-style: none;
@@ -74,36 +102,9 @@ html {
   border: 1px solid var(--clr-neutral-100);
   margin-bottom: 0.5rem;
 }
-
-/* ---- Background Gradients ---- */
-/* ---- Background Gradients ---- */
-body {
-  height: 100vh;
-  background-color: var(--clr-accent-200);
-  background-image: radial-gradient(
-      circle 60rem at top right,
-      var(--clr-primary-400),
-      var(--clr-gradient-0)
-    ),
-    /* radial-gradient(
-      circle 30rem at left,
-      var(--clr-primary-400),
-      var(--clr-gradient-0)
-    ),
-    radial-gradient(
-      circle 30rem at center,
-      var(--clr-primary-400),
-      var(--clr-gradient-0)
-    ), */
-      radial-gradient(
-        circle 30rem at bottom left,
-        var(--clr-primary-400),
-        var(--clr-gradient-0)
-      );
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
+.hero {
+  display: flex;
+  height: 320px;
   z-index: 1;
 }
 
@@ -124,8 +125,6 @@ body {
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
   z-index: 10;
-  /* top: 2.3rem;
-  left: 2.3rem; */
 }
 .card1 {
   position: absolute;
@@ -161,18 +160,12 @@ body {
 
 /* ---- SHAPES ---- */
 /* ---- SHAPES ---- */
-.hero {
-  display: flex;
-  /* SETS HEIGHT OF LANDING SCREEN */
-  height: 320px;
-  z-index: 1;
-}
 .ball {
   position: fixed;
   top: 7rem;
   left: 5rem;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background-image: radial-gradient(
     /* 41% 100%, */ #e6c1e6 40%,
@@ -186,19 +179,22 @@ body {
   position: fixed;
   top: 38rem;
   left: 1rem;
-  width: 100px;
+  width: 250px;
   height: 100px;
-  background-color: var(--clr-primary-400);
+  background-color: #ff7aa8ca;
+  box-shadow: 0 0 57px 0px var(--clr-primary-400);
   z-index: 2;
 }
 /* ---- PAPERWEIGHT ---- */
 .paperweight {
   position: fixed;
   top: 20rem;
-  left: 15rem;
+  left: 19.5rem;
   width: 100px;
   height: 100px;
-  background-color: var(--clr-primary-400);
+  border-radius: 50%;
+  background-color: #ff7aa8ca;
+  box-shadow: 0 0 57px 23px var(--clr-primary-400);
   z-index: 2;
 }
 
